@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>作品集</title>
+<meta name="description" content="Wade 的游戏策划作品集，包含基地征服 RPG、在线试玩与策划资料。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="top" id="topbar">
+  <div class="wrap top-in">
+    <a class="brand" href="#top" id="brand"></a>
+    <nav class="nav" id="nav" aria-label="页面导航"></nav>
+  </div>
+</header>
+
+<main id="main">
+  <section id="top" class="hero"></section>
+  <section id="project" class="sec" aria-labelledby="h-project"></section>
+  <section id="playables" class="sec" aria-labelledby="h-playables"></section>
+  <section id="docs" class="sec" aria-labelledby="h-docs"></section>
+  <section id="others" class="sec" aria-labelledby="h-others"></section>
+  <section id="resume" class="sec" aria-labelledby="h-resume"></section>
+</main>
+
+<footer class="foot" id="contact"></footer>
+
+<dialog id="dlg" aria-labelledby="dlgTitle">
+  <div class="dlg">
+    <div class="dlg-bar">
+      <button class="btn small" id="dlgBack" type="button" hidden>返回</button>
+      <h2 class="dlg-title" id="dlgTitle"></h2>
+      <div class="dlg-acts" id="dlgActs"></div>
+      <button class="btn small" id="dlgCopy" type="button">复制链接</button>
+      <button class="btn small" id="dlgClose" type="button" autofocus>关闭</button>
+    </div>
+    <div class="dlg-body" id="dlgBody"></div>
+  </div>
+</dialog>
+
+<noscript><p style="padding:24px">这个页面需要开启 JavaScript 才能显示作品。</p></noscript>
+
+<script src="content.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
