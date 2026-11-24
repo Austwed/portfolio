@@ -586,3 +586,14 @@ h1 em{font:inherit;color:var(--ice)}
 .project-reading{display:grid;gap:.35rem}
 .project-reading .history-link{justify-content:flex-end;margin:0}
 @media(max-width:660px){.project-reading{margin-top:.7rem}.project-reading .history-link{justify-content:flex-start}}
+
+.portfolio-pdf{display:flex;align-items:center;flex-wrap:wrap;gap:.85rem;margin-top:.9rem;color:#f1f6ff;font-size:.9rem}
+.pdf-read{padding:.4rem .85rem;border:1px solid #ddeaffb8;font-weight:650}
+.pdf-read:hover,.pdf-read:focus-visible{background:#e9f2ff;color:#193e8d}
+.portfolio-pdf span{font-size:.82rem;color:#d4e2fc}
+.pdf-download{text-decoration:underline;text-underline-offset:.22em}
+@media(max-width:660px){
+  .portfolio-pdf{grid-area:4/1/5/-1}
+  .signature .contact{grid-area:5/1/6/-1}
+  .home-poster .exhibit{grid-row:6}
+}
