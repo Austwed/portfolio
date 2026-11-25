@@ -364,7 +364,7 @@ h1 em{font:inherit;color:var(--ice)}
 .ar-monitor{position:relative;overflow:hidden}
 .research{background-color:#cbd0d1;background-image:radial-gradient(#7c878849 .85px,transparent 1.25px),linear-gradient(160deg,#e3e7e6,#c3c9ca);background-size:9px 9px,100% 100%}
 .shelf{--rack-gap:clamp(20px,3.6vw,62px)}
-.volumes{max-width:1360px;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--rack-gap);padding:1rem clamp(12px,2vw,34px) 0;position:relative}
+.volumes{max-width:960px;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--rack-gap);padding:1rem clamp(12px,2vw,34px) 0;position:relative}
 .volume{display:grid;grid-template-rows:1fr 4.4em;gap:0;min-width:0}
 .volume-note{margin-top:1.35rem;font-size:.88rem}
 .binding{min-height:clamp(365px,51vh,555px)}
