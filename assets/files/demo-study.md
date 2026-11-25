@@ -33,7 +33,7 @@
 
 从操作结构看，本作更适合愿意停下来观察队伍、安排人员，再进入战场验证计划的玩家。暂停减轻连续操作压力，但不会代替配置和判断。其核心承诺不是纯动作反应，也不是自动增长的放置收益，而是：**玩家的准备和处置能改变这一仗，以及这一仗之后的生活。**
 
-依据：[重点总案](../策划/DEMO/00_总策划案.md)、[人物与人员管理](../策划/DEMO/01_系统规则/02_人物与人员管理.md)、[运行环境与发布](../策划/DEMO/07_实现与交付/03_运行环境与发布.md)。
+依据：[重点总案](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/00_%E6%80%BB%E7%AD%96%E5%88%92%E6%A1%88.md)、[人物与人员管理](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/02_%E4%BA%BA%E7%89%A9%E4%B8%8E%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86.md)、[运行环境与发布](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/07_%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BA%A4%E4%BB%98/03_%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E4%B8%8E%E5%8F%91%E5%B8%83.md)。
 
 <a id="journey"></a>
 
@@ -58,7 +58,7 @@
 
 以上规则形成一种“可思考的压力”：危机已知，准备时间有限，但压力主要落在是否推进一天，而不是读对白也在倒数。
 
-依据：[流程与关卡目录](../策划/DEMO/02_流程与关卡/目录.md)、[古窟与窝点](../策划/DEMO/02_流程与关卡/04_沉眠古窟与土匪窝点.md)、[任务日历与事件](../策划/DEMO/01_系统规则/11_任务日历与事件.md)。
+依据：[流程与关卡目录](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/02_%E6%B5%81%E7%A8%8B%E4%B8%8E%E5%85%B3%E5%8D%A1/%E7%9B%AE%E5%BD%95.md)、[古窟与窝点](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/02_%E6%B5%81%E7%A8%8B%E4%B8%8E%E5%85%B3%E5%8D%A1/04_%E6%B2%89%E7%9C%A0%E5%8F%A4%E7%AA%9F%E4%B8%8E%E5%9C%9F%E5%8C%AA%E7%AA%9D%E7%82%B9.md)、[任务日历与事件](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/11_%E4%BB%BB%E5%8A%A1%E6%97%A5%E5%8E%86%E4%B8%8E%E4%BA%8B%E4%BB%B6.md)。
 
 <a id="loop"></a>
 
@@ -96,7 +96,7 @@ flowchart LR
 
 当前 Demo 的两处生产基地共享物资库存，各自保留岗位和人员归属；新版正式行军还明确区分留守与到达目的地的驻兵。因此它已经涉及“人在哪里”，但不能套用完整版规划，把本作写成各领地物资独立、必须跨地运输的完整物流模拟。
 
-依据：[营地经营与日结](../策划/DEMO/01_系统规则/04_营地经营与日结.md)、[编队部署与军需](../策划/DEMO/01_系统规则/06_编队部署与军需.md)、[世界行军与据点](../策划/DEMO/01_系统规则/10_世界行军与据点.md)。
+依据：[营地经营与日结](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/04_%E8%90%A5%E5%9C%B0%E7%BB%8F%E8%90%A5%E4%B8%8E%E6%97%A5%E7%BB%93.md)、[编队部署与军需](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/06_%E7%BC%96%E9%98%9F%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%86%9B%E9%9C%80.md)、[世界行军与据点](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/10_%E4%B8%96%E7%95%8C%E8%A1%8C%E5%86%9B%E4%B8%8E%E6%8D%AE%E7%82%B9.md)。
 
 <a id="personnel"></a>
 
@@ -147,7 +147,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 
 这条曲线配合随规模变化的募兵价格和日初供应，提供扩军的反向压力；全军而非单兵种口径，又避免用死亡率强迫玩家平均分配兵种。它能解释设计如何抑制囤兵，但不能单靠公式证明长期经济已经稳定。
 
-依据：[制作理念中的人员取舍](../制作理念.md)、[营地经营规则](../策划/DEMO/01_系统规则/04_营地经营与日结.md)、[经营计算实现](../RPGDemo/Assets/Scripts/Base/BaseEconomy.cs)、[生死与兵源公式](../策划/DEMO/05_数值与配置/00_公式与结算顺序.md)。
+依据：[人员管理规则](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/02_%E4%BA%BA%E7%89%A9%E4%B8%8E%E4%BA%BA%E5%91%98%E7%AE%A1%E7%90%86.md)、[营地经营规则](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/04_%E8%90%A5%E5%9C%B0%E7%BB%8F%E8%90%A5%E4%B8%8E%E6%97%A5%E7%BB%93.md)、[经营计算实现](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Base/BaseEconomy.cs)、[生死与兵源公式](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/05_%E6%95%B0%E5%80%BC%E4%B8%8E%E9%85%8D%E7%BD%AE/00_%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%BB%93%E7%AE%97%E9%A1%BA%E5%BA%8F.md)。
 
 <a id="combat"></a>
 
@@ -188,7 +188,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 
 这意味着高台上的弓兵即使没有下坡路，仍可射击；相反，路径可通也不保证站在当前位置能射到。地形价值主要来自何时发现敌人、谁先出手、同时有多少人能攻击，以及撤退是否顺畅，而不是笼统的“站高伤害更大”。
 
-依据：[即时战斗与 AI](../策划/DEMO/01_系统规则/07_即时战斗与AI.md)、[命中与伤害公式](../策划/DEMO/05_数值与配置/00_公式与结算顺序.md)、[法球与伤害实现](../RPGDemo/Assets/Scripts/Battle/RealtimeRpgCombat.cs)、[剑士锁定实现](../RPGDemo/Assets/Scripts/Battle/RealtimeSwordContactPin.cs)。
+依据：[即时战斗与 AI](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/07_%E5%8D%B3%E6%97%B6%E6%88%98%E6%96%97%E4%B8%8EAI.md)、[命中与伤害公式](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/05_%E6%95%B0%E5%80%BC%E4%B8%8E%E9%85%8D%E7%BD%AE/00_%E5%85%AC%E5%BC%8F%E4%B8%8E%E7%BB%93%E7%AE%97%E9%A1%BA%E5%BA%8F.md)、[法球与伤害实现](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Battle/RealtimeRpgCombat.cs)、[剑士锁定实现](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Battle/RealtimeSwordContactPin.cs)。
 
 <a id="economy-time"></a>
 
@@ -206,7 +206,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 
 副本把练习与收益再分开：体力限制重复胜利后的领奖，不禁止继续入场尝试；首通后的扫荡要求严格高于敌方 1.5 倍参考战力，仍结算军需与伤损。前者允许学习，后者压缩重复操作，但都没有脱离经营账本。
 
-依据：[正式数值配置表](../策划/DEMO/基地征服-系统数值配置表.xlsx)、[交易募兵与重铸](../策划/DEMO/01_系统规则/05_交易募兵与重铸.md)、[技能特性与成长](../策划/DEMO/01_系统规则/08_技能特性与成长.md)、[战果奖励与副本](../策划/DEMO/01_系统规则/09_战果奖励与副本.md)。
+依据：[正式数值配置表](https://austwed.github.io/portfolio/assets/files/system.xlsx)、[交易募兵与重铸](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/05_%E4%BA%A4%E6%98%93%E5%8B%9F%E5%85%B5%E4%B8%8E%E9%87%8D%E9%93%B8.md)、[技能特性与成长](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/08_%E6%8A%80%E8%83%BD%E7%89%B9%E6%80%A7%E4%B8%8E%E6%88%90%E9%95%BF.md)、[战果奖励与副本](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/01_%E7%B3%BB%E7%BB%9F%E8%A7%84%E5%88%99/09_%E6%88%98%E6%9E%9C%E5%A5%96%E5%8A%B1%E4%B8%8E%E5%89%AF%E6%9C%AC.md)。
 
 <a id="cases"></a>
 
@@ -238,7 +238,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 
 这种收尾把开场学过的劳动与空间重新赋义：当初是在日常里帮忙，现在是在恢复日常。它完成“安顿乡亲”的阶段承诺，同时把寻找搭档的悬念留向西方。可选调查不阻塞重建，也让剧情阅读和系统收尾保留不同节奏。
 
-依据：[古窟流程](../策划/DEMO/02_流程与关卡/04_沉眠古窟与土匪窝点.md)与[现行伤害保护实现](../RPGDemo/Assets/Scripts/Base/BaseDemoRuins.cs)、[首防与第二波](../策划/DEMO/02_流程与关卡/05_首防与第二波.md)、[追击阶段攻击处理](../RPGDemo/Assets/Scripts/Battle/RealtimeRpgCombat.cs)、[返乡调查与重建](../策划/DEMO/02_流程与关卡/07_返乡调查与重建.md)。
+依据：[古窟流程](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/02_%E6%B5%81%E7%A8%8B%E4%B8%8E%E5%85%B3%E5%8D%A1/04_%E6%B2%89%E7%9C%A0%E5%8F%A4%E7%AA%9F%E4%B8%8E%E5%9C%9F%E5%8C%AA%E7%AA%9D%E7%82%B9.md)与[现行伤害保护实现](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Base/BaseDemoRuins.cs)、[首防与第二波](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/02_%E6%B5%81%E7%A8%8B%E4%B8%8E%E5%85%B3%E5%8D%A1/05_%E9%A6%96%E9%98%B2%E4%B8%8E%E7%AC%AC%E4%BA%8C%E6%B3%A2.md)、[追击阶段攻击处理](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Battle/RealtimeRpgCombat.cs)、[返乡调查与重建](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/02_%E6%B5%81%E7%A8%8B%E4%B8%8E%E5%85%B3%E5%8D%A1/07_%E8%BF%94%E4%B9%A1%E8%B0%83%E6%9F%A5%E4%B8%8E%E9%87%8D%E5%BB%BA.md)。
 
 <a id="interface"></a>
 
@@ -261,7 +261,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 
 这些安排说明信息设计在支撑玩法，而不是给复杂规则事后补一本说明书。相应代价是名册、预估、队长和军需同时竞争横屏空间，因此更应保留关键比较，把通用解释收进帮助，而不是继续增加同级按钮。
 
-依据：[设施界面](../策划/DEMO/03_界面与操作/03_基地设施界面.md)、[备战战斗与战果界面](../策划/DEMO/03_界面与操作/04_备战战斗与战果界面.md)、[动画镜头与声音](../策划/DEMO/06_视听与资源/01_动画镜头特效与声音.md)。
+依据：[设施界面](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/03_%E7%95%8C%E9%9D%A2%E4%B8%8E%E6%93%8D%E4%BD%9C/03_%E5%9F%BA%E5%9C%B0%E8%AE%BE%E6%96%BD%E7%95%8C%E9%9D%A2.md)、[备战战斗与战果界面](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/03_%E7%95%8C%E9%9D%A2%E4%B8%8E%E6%93%8D%E4%BD%9C/04_%E5%A4%87%E6%88%98%E6%88%98%E6%96%97%E4%B8%8E%E6%88%98%E6%9E%9C%E7%95%8C%E9%9D%A2.md)、[动画镜头与声音](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/06_%E8%A7%86%E5%90%AC%E4%B8%8E%E8%B5%84%E6%BA%90/01_%E5%8A%A8%E7%94%BB%E9%95%9C%E5%A4%B4%E7%89%B9%E6%95%88%E4%B8%8E%E5%A3%B0%E9%9F%B3.md)。
 
 <a id="evidence"></a>
 
@@ -308,7 +308,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 - **战力读数保留解释边界。** 同一总战力不代表相同射程、掩护和接敌条件；备战数值适合辅助比较，不能代替阵容与地图分析。隔离拟合的候选权重也不应直接冒充正式扫荡口径。
 - **教学继续突出因果。** “参战后少产多少”“伤员为何暂不复工”“多等一天换来什么”比再讲一次系统定义更能帮助决策。现有预估与名册已经提供承载位置，重点在信息组织而非新增入口。
 
-数据来源：[主线兵力报告](../策划/DEMO/08_验收用例/战斗标定数据/主线兵力/验收记录.md)、[三主力与法师报告](../策划/DEMO/08_验收用例/战斗标定数据/三主力克制与法师/验收记录.md)、[溅射与战术报告](../策划/DEMO/08_验收用例/战斗标定数据/法师溅射与战术对照/验收记录.md)、[纯兵战力候选标定](../策划/DEMO/08_验收用例/战斗标定数据/四职业纯兵战力标定.md)。
+数据来源：[主线兵力报告](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/08_%E9%AA%8C%E6%94%B6%E7%94%A8%E4%BE%8B/%E6%88%98%E6%96%97%E6%A0%87%E5%AE%9A%E6%95%B0%E6%8D%AE/%E4%B8%BB%E7%BA%BF%E5%85%B5%E5%8A%9B/%E9%AA%8C%E6%94%B6%E8%AE%B0%E5%BD%95.md)、[三主力与法师报告](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/08_%E9%AA%8C%E6%94%B6%E7%94%A8%E4%BE%8B/%E6%88%98%E6%96%97%E6%A0%87%E5%AE%9A%E6%95%B0%E6%8D%AE/%E4%B8%89%E4%B8%BB%E5%8A%9B%E5%85%8B%E5%88%B6%E4%B8%8E%E6%B3%95%E5%B8%88/%E9%AA%8C%E6%94%B6%E8%AE%B0%E5%BD%95.md)、[溅射与战术报告](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/08_%E9%AA%8C%E6%94%B6%E7%94%A8%E4%BE%8B/%E6%88%98%E6%96%97%E6%A0%87%E5%AE%9A%E6%95%B0%E6%8D%AE/%E6%B3%95%E5%B8%88%E6%BA%85%E5%B0%84%E4%B8%8E%E6%88%98%E6%9C%AF%E5%AF%B9%E7%85%A7/%E9%AA%8C%E6%94%B6%E8%AE%B0%E5%BD%95.md)、[纯兵战力候选标定](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/08_%E9%AA%8C%E6%94%B6%E7%94%A8%E4%BE%8B/%E6%88%98%E6%96%97%E6%A0%87%E5%AE%9A%E6%95%B0%E6%8D%AE/%E5%9B%9B%E8%81%8C%E4%B8%9A%E7%BA%AF%E5%85%B5%E6%88%98%E5%8A%9B%E6%A0%87%E5%AE%9A.md)。
 
 <a id="conclusion"></a>
 
@@ -322,7 +322,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 
 **这是一段由失去家园开始、以亲手恢复日常告一段落的冒险。人员与资源提供选择的重量，暂停指挥提供介入结果的空间，返乡重建则为这些选择给出看得见的回报。**
 
-依据：[配表导入与回写](../策划/DEMO/05_数值与配置/01_字段字典与配表说明.md)、[地图与内容编辑接入](../策划/DEMO/07_实现与交付/02_地图与内容编辑接入.md)。
+依据：[配表导入与回写](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/05_%E6%95%B0%E5%80%BC%E4%B8%8E%E9%85%8D%E7%BD%AE/01_%E5%AD%97%E6%AE%B5%E5%AD%97%E5%85%B8%E4%B8%8E%E9%85%8D%E8%A1%A8%E8%AF%B4%E6%98%8E.md)、[地图与内容编辑接入](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/07_%E5%AE%9E%E7%8E%B0%E4%B8%8E%E4%BA%A4%E4%BB%98/02_%E5%9C%B0%E5%9B%BE%E4%B8%8E%E5%86%85%E5%AE%B9%E7%BC%96%E8%BE%91%E6%8E%A5%E5%85%A5.md)。
 
 ---
 
@@ -331,7 +331,7 @@ N 以开战全军普通兵数为起点，减本场我方永久阵亡，加此前
 ## 附录：取证与数值核对
 
 - 实现对象固定为 Unity `9d51480`。研究时工作树中的场景改动与新增美术包不作为该提交的表现依据；父仓文档与 Unity 工程分别管理版本。
-- 已只读检查[系统数值配置表](../策划/DEMO/基地征服-系统数值配置表.xlsx)的旧版页签。现表可按配置区和记录 ID 复核：粮田岗位与日产查 cfg_facility / farm，日粮查 cfg_recruit_params / SoldierDailyFood 和 cfg_facility_params / OpeningEconomy_LeaderFood，军需增幅查 cfg_supply / grade_1、grade_2，兵源与即死敏感度查 cfg_recruitment 和 cfg_recruit_params / SoldierDeathSensitivity。
-- [试玩调参表](../策划/DEMO/基地征服-试玩调参表.xlsx)核对为“职业与单位、装备与商店、营地产出、关卡与军需”四页。本文未回写工作簿，也未修改配置或存档。
-- 代码抽核包括[日结与粮田补益](../RPGDemo/Assets/Scripts/Base/BaseEconomy.cs)、[人员资格](../RPGDemo/Assets/Scripts/Base/BaseDevelopment.cs)、[古窟首通保护](../RPGDemo/Assets/Scripts/Base/BaseDemoRuins.cs)及战斗章节所列实现。报告数字引自已有记录；本轮新增检查针对文档结构、引用及演算。
-- 本文不推算销售、留存、市场份额或商业成绩，也不把机制分析当作用户访谈结论。现行规则仍以[策划索引](../策划/INDEX.md)所列各卷为准。
+- 已只读检查[系统数值配置表](https://austwed.github.io/portfolio/assets/files/system.xlsx)的旧版页签。现表可按配置区和记录 ID 复核：粮田岗位与日产查 cfg_facility / farm，日粮查 cfg_recruit_params / SoldierDailyFood 和 cfg_facility_params / OpeningEconomy_LeaderFood，军需增幅查 cfg_supply / grade_1、grade_2，兵源与即死敏感度查 cfg_recruitment 和 cfg_recruit_params / SoldierDeathSensitivity。
+- [试玩调参表](https://austwed.github.io/portfolio/assets/files/trial.xlsx)取证时为四页；现行下载版将职业与单位、装备与商店、营地产出、关卡与军需收在同一页。本文未回写工作簿，也未修改配置或存档。
+- 代码抽核包括[日结与粮田补益](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Base/BaseEconomy.cs)、[人员资格](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Base/BaseDevelopment.cs)、[古窟首通保护](https://github.com/Austwed/RPGDemo/blob/9d51480f8d3342ad8e12efbd195fbfe4eae98865/Assets/Scripts/Base/BaseDemoRuins.cs)及战斗章节所列实现。报告数字引自已有记录；本轮新增检查针对文档结构、引用及演算。
+- 本文不推算销售、留存、市场份额或商业成绩，也不把机制分析当作用户访谈结论。现行规则仍以[公开策划目录](https://github.com/Austwed/RPGDemo/blob/9bc2ee1b42626c376446665a70a1ad249f1a3e92/%E7%AD%96%E5%88%92/DEMO/%E4%B8%AD%E6%96%87%E7%9B%AE%E5%BD%95%E8%AF%B4%E6%98%8E.md)所列各卷为准。
