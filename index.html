@@ -8,7 +8,9 @@
   <title>金权伟 Wade · 游戏策划作品集</title>
   <link rel="icon" href="assets/exhibit/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
-  <script defer src="portfolio.js"></script>
+  <link rel="stylesheet" href="history-preview/tabs.css">
+  <script src="history-preview/demo-entry.js"></script>
+  <script defer blocking="render" src="portfolio.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">跳至作品</a>
@@ -34,7 +36,7 @@
         </div>
         <div class="exhibit" aria-label="《断剑归途》世界地图、策划文档、拆解内页和 ARCG 实机">
           <div class="registration" aria-hidden="true"><i></i><i></i></div>
-          <a class="sheet sample-spec" data-piece="materials" href="#materials"><span class="paper-excerpt"><small>断剑归途 · 游戏设计规格书</small><strong>队长成长</strong><span>SYS-06　规格节选</span><span class="spec-lines"><span>成长范围<b>1 至 9 级</b></span><span>主动技能<b>每人 1 个</b></span><span>随机特性<b>0 至 3 项</b></span></span></span><span class="piece-caption"><b>策划文档</b></span></a>
+          <a class="sheet sample-spec" data-piece="materials" href="#materials"><span class="paper-excerpt"><small>断剑归途 · 游戏设计规格书</small><strong>队长成长</strong><span>第 4.6 节　规格节选</span><span class="spec-lines"><span>成长范围<b>1 至 9 级</b></span><span>主动技能<b>每人 1 个</b></span><span>随机队长特性<b>0 至 3 项</b></span></span></span><span class="piece-caption"><b>策划文档</b></span></a>
           <a class="sheet sample-research" data-piece="research" href="#research"><span class="paper-excerpt"><small>边缘世界 · 系统设计拆解</small><strong>4.3 工作管理</strong><span>4.3.1 工作优先级</span><img src="assets/exhibit/work-priorities.webp" alt="拆解原文图 4-2，殖民者工作优先级面板"><small>图 4-2　工作优先级面板</small></span><span class="piece-caption"><b>游戏拆解案</b></span></a>
           <a class="map-piece" data-piece="flagship" href="#flagship">
             <span class="paper-map" role="img" aria-label="《断剑归途》游戏中的山脉、河流与村镇道路"><i></i><i></i><i></i><i></i></span>
@@ -61,7 +63,7 @@
           <li><a href="read/design/index.html" target="_blank" rel="noopener">《断剑归途》<wbr><span class="work-name">游戏设计规格书</span></a></li>
           <li><a href="read/system-table/index.html" target="_blank" rel="noopener">系统数值配置表</a><a href="read/trial-table/index.html" target="_blank" rel="noopener">试玩调参表</a></li>
           <li><a href="assets/tools/map-editor/index.html" target="_blank" rel="noopener">场景地图编辑器</a><a href="read/retrospective/index.html" target="_blank" rel="noopener">项目复盘</a></li>
-          <li><a href="https://github.com/Austwed/RPGDemo" target="_blank" rel="noopener">Unity 工程源码</a><a href="read/demo-study/index.html" target="_blank" rel="noopener">《断剑归途》拆解案 · GPT</a></li>
+          <li><a href="https://github.com/Austwed/RPGDemo" target="_blank" rel="noopener">Unity 工程源码</a><a href="read/demo-study/index.html" target="_blank" rel="noopener">《断剑归途》Demo 拆解案</a></li>
         </ul>
       </div>
       <div class="catalog-column" data-group="research">
@@ -78,11 +80,12 @@
     </div>
   </section>
 
-  <section class="scene flagship" id="flagship" aria-labelledby="game-title">
-    <svg class="tactics" viewBox="0 0 600 390" aria-hidden="true"><defs><pattern id="tiles" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="currentColor"/></pattern>
-      <linearGradient id="grid-fade" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop offset="56%" stop-color="white"/><stop offset="82%" stop-color="white" stop-opacity=".4"/><stop offset="100%" stop-color="white" stop-opacity="0"/></linearGradient>
-      <mask id="tactics-fade"><rect width="600" height="390" fill="url(#grid-fade)"/></mask></defs>
-      <path fill="url(#tiles)" mask="url(#tactics-fade)" d="M0 0h600v390H0z"/><g fill="none" stroke="currentColor" stroke-width="2"><path class="route" d="M28 207h104l78-78h104l78-78h103"/><path class="route" d="M80 233h104l52-52h104l78-78h77"/><path d="m480 39 16 12-16 12m0 28 16 12-16 12"/></g><g fill="currentColor"><rect x="21" y="200" width="14" height="14"/><rect x="73" y="226" width="14" height="14"/></g></svg>
+  <section class="scene flagship" id="flagship" aria-labelledby="game-title"><button class="history-trigger" type="button">DEMO开发历程<i>›</i></button>
+    <svg class="tactics" viewBox="0 -140 600 530" aria-hidden="true"><defs><pattern id="tiles" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="currentColor"/></pattern>
+      <linearGradient id="grid-fade" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop offset="0%" stop-color="white" stop-opacity="0"/><stop offset="34%" stop-color="white"/><stop offset="56%" stop-color="white"/><stop offset="82%" stop-color="white" stop-opacity=".4"/><stop offset="100%" stop-color="white" stop-opacity="0"/></linearGradient>
+      <mask id="tactics-fade"><rect y="-140" width="600" height="530" fill="url(#grid-fade)"/></mask></defs>
+      <path fill="url(#tiles)" mask="url(#tactics-fade)" d="M0 -140h600v530H0z"/><g fill="none" stroke="currentColor" stroke-width="2"><path class="route" pathLength="1" d="M28 207h104l78-78h104l78-78h103"/><path class="route" pathLength="1" d="M80 233h104l52-52h104l78-78h77"/>
+<path class="signal first" d="M-15 -10 0 0-15 10"/><path class="signal second" d="M-15 -10 0 0-15 10"/></g></svg>
     <div class="wrap game-spread">
       <article class="game-main">
         <div class="game-preview">
@@ -114,7 +117,7 @@
 
   <section class="scene materials" id="materials" aria-labelledby="docs-title">
     <div class="wrap docs-inner">
-      <div class="section-head docs-head"><div><p class="eyeline">断剑归途</p><h2 id="docs-title">设计与制作资料</h2></div><div class="project-reading"><p class="history-link">从早期灰盒到返乡主线<a class="text-link" href="read/retrospective/index.html" target="_blank" rel="noopener">阅读项目复盘</a></p><p class="history-link">GitHub 公开目录<a class="text-link" href="https://github.com/Austwed/RPGDemo/tree/main/%E7%AD%96%E5%88%92/DEMO" target="_blank" rel="noopener">查看 DEMO 策划资料</a></p><p class="history-link">GPT 撰写<a class="text-link" href="read/demo-study/index.html" target="_blank" rel="noopener">阅读《断剑归途》拆解案</a></p></div></div>
+      <div class="section-head docs-head"><div><p class="eyeline">断剑归途</p><h2 id="docs-title">设计与制作资料</h2></div><div class="project-reading"><p class="history-link">从早期灰盒到返乡主线<a class="text-link" href="read/retrospective/index.html" target="_blank" rel="noopener">阅读项目复盘</a></p><p class="history-link">GitHub 公开目录<a class="text-link" href="https://github.com/Austwed/RPGDemo/tree/main/%E7%AD%96%E5%88%92/DEMO" target="_blank" rel="noopener">查看 DEMO 策划资料</a></p><p class="history-link">系统与数值解析<a class="text-link" href="read/demo-study/index.html" target="_blank" rel="noopener">阅读《断剑归途》Demo 拆解案</a></p></div></div>
       <div class="books">
         <article class="book-entry">
           <a href="read/brief/index.html" class="book-jacket brief-jacket" aria-label="阅读《断剑归途》玩法与流程设计" target="_blank" rel="noopener"><span>断剑归途</span><b>玩法与<br>流程设计</b><i class="route-graphic" aria-hidden="true"></i><small><i>玩法设计　/　</i>6 章</small></a>
@@ -122,7 +125,7 @@
         </article>
         <article class="book-entry">
           <a href="read/design/index.html" class="book-jacket spec-jacket" aria-label="阅读《断剑归途》游戏设计规格书" target="_blank" rel="noopener"><span>断剑归途</span><b>游戏设计<br>规格书</b><i class="spec-graphic" aria-hidden="true"></i><small><i>制作规格　/　</i>12 章</small></a>
-          <div class="book-copy"><p class="eyeline">制作规格 · 12 章</p><h3><a href="read/design/index.html" target="_blank" rel="noopener">系统规则、数值与验收</a></h3><p>可逐项查数值公式、关卡触发条件、存档写入时机和实机验收标准。</p><div class="inline-links"><a class="text-link" href="read/design/index.html" target="_blank" rel="noopener">阅读全文</a><a class="text-link" download="断剑归途-游戏设计规格书.docx" href="assets/files/design-spec.docx" target="_blank" rel="noopener">下载 Word</a></div></div>
+          <div class="book-copy"><p class="eyeline">制作规格 · 12 章</p><h3><a href="read/design/index.html" target="_blank" rel="noopener">系统规则、数值与验收</a></h3><p>可逐项查数值公式、关卡触发条件、存档写入时机和实机验收标准。</p><div class="inline-links"><a class="text-link" href="read/design/index.html" target="_blank" rel="noopener">阅读全文</a><a class="text-link" download="断剑归途-游戏设计规格书.pdf" href="assets/files/design-spec.pdf" target="_blank" rel="noopener">下载 PDF</a></div></div>
         </article>
       </div>
       <div class="ledger-pair">

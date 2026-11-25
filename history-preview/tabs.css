@@ -1,0 +1,43 @@
+.branch-tab,#back.branch-tab,.history-trigger{
+ position:absolute;z-index:5;top:var(--tab-y,33vh);transform:translateY(-50%);
+ width:148px;height:42px;display:flex;align-items:center;justify-content:space-evenly;
+ background:#18313b;color:#f2f4ef;border:1px solid #688185;border-radius:0;
+ font:600 15px/1.2 "Microsoft YaHei",sans-serif;letter-spacing:.035em;cursor:pointer;padding:0
+}
+#back.branch-tab{left:0;border-left:0;border-radius:0 3px 3px 0}
+.history-trigger{right:0;border-right:0;border-radius:3px 0 0 3px}
+.branch-tab i,.history-trigger i{font:24px/1 Georgia,serif;color:#bddecf}
+.branch-tab:hover,.history-trigger:hover{background:#2d4c54}
+@media(min-width:960px){.cover .flagship .tactics{top:calc(var(--tab-y,33vh) - 4vw);right:100px}}
+@media(max-width:959px){.history-trigger{position:relative;top:auto;transform:none;align-self:flex-end;margin:8px 0}#back.branch-tab{position:relative;top:auto;transform:none;margin-top:8px}}
+.flagship .tactics{margin-top:-11.2vw}
+.flagship.is-current .tactics .route{animation:none;stroke-dasharray:1;stroke-dashoffset:0;opacity:.65}
+.tactics .signal{stroke-width:2.6;offset-rotate:auto;offset-distance:100%;offset-anchor:0 0;transform-box:view-box}
+.tactics .signal.first{offset-path:path("M28 207h104l78-78h104l78-78h103")}
+.tactics .signal.second{offset-path:path("M80 233h104l52-52h104l78-78h77")}
+@media(prefers-reduced-motion:no-preference){
+ .flagship.is-current .tactics .route{animation:draw-route 1.3s ease-out both}
+ .flagship.is-current .tactics .signal{animation:travel-signal 1.3s ease-out both}
+ @keyframes draw-route{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+ @keyframes travel-signal{from{offset-distance:0%}to{offset-distance:100%}}
+}
+@media(max-width:660px){.flagship .tactics{margin-top:-14.46vw}}
+
+@view-transition{navigation:auto}
+@media(prefers-reduced-motion:no-preference){
+ html:is(.history-enter,.history-return)::view-transition-group(*){animation-duration:480ms}
+ html:is(.history-enter,.history-return)::view-transition-image-pair(root){isolation:isolate}
+ html:is(.history-enter,.history-return)::view-transition-old(root),
+ html:is(.history-enter,.history-return)::view-transition-new(root){mix-blend-mode:normal;animation:none}
+ html.history-enter::view-transition-new(root){animation:board-slide-in 480ms cubic-bezier(.35,0,.2,1) both}
+ html.history-return::view-transition-old(root){z-index:1;animation:board-slide-out 480ms cubic-bezier(.35,0,.2,1) both}
+ /* Move each snapshot group in viewport coordinates, keeping its captured rotation inside. */
+ html.history-return::view-transition-group(.history-sticker){animation:board-slide-out 480ms cubic-bezier(.35,0,.2,1) both}
+ html.history-return::view-transition-old(.history-sticker){
+  transform-origin:48% 1%;animation:history-note-out 360ms cubic-bezier(.4,0,.65,1) both
+ }
+ @keyframes history-note-out{to{scale:.12;opacity:0}}
+ @keyframes board-slide-out{from{translate:0}to{translate:100vw 0}}
+ @keyframes board-slide-in{from{translate:100vw 0}to{translate:0}}
+}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
