@@ -85,8 +85,10 @@ const segments=nodes.slice(0,7).map((_,i)=>{
 });
 function layout(){
  if(innerWidth<=900)return;
- const first=nodes[0].getBoundingClientRect(),last=nodes[7].getBoundingClientRect();
- const tabY=(first.bottom+last.top)/2-room.getBoundingClientRect().top+room.scrollTop;
+ // Use the laid-out paper edges; entrance scaling temporarily changes their visual bounds.
+ const firstBottom=nodes[0].offsetTop+nodes[0].offsetHeight;
+ const lastTop=nodes[7].offsetTop;
+ const tabY=board.offsetTop+firstBottom+(lastTop-firstBottom)*.56;
  room.style.setProperty("--tab-y",tabY+"px");
  sessionStorage.setItem("historyTabRatio",String(tabY/innerHeight));
  const gap=10;

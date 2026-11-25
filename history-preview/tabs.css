@@ -7,7 +7,10 @@
 #back.branch-tab{left:0;border-left:0;border-radius:0 3px 3px 0}
 .history-trigger{right:0;border-right:0;border-radius:3px 0 0 3px}
 .branch-tab i,.history-trigger i{font:24px/1 Georgia,serif;color:#bddecf}
-.branch-tab:hover,.history-trigger:hover{background:#2d4c54}
+.branch-tab:hover{background:#2d4c54}
+.history-trigger{background-color:#d9d3c3;background-image:radial-gradient(#857a6540 .8px,transparent 1px);background-size:8px 8px;color:#302e28;border-color:#998d78}
+.history-trigger i{color:#705440}
+.history-trigger:hover{background-color:#e8e2d2}
 @media(min-width:960px){.cover .flagship .tactics{top:calc(var(--tab-y,33vh) - 4vw);right:100px}}
 @media(max-width:959px){.history-trigger{position:relative;top:auto;transform:none;align-self:flex-end;margin:8px 0}#back.branch-tab{position:relative;top:auto;transform:none;margin-top:8px}}
 .flagship .tactics{margin-top:-11.2vw}

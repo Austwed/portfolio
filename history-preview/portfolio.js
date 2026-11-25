@@ -304,7 +304,8 @@
     pause.className = "slideshow-control";
     const controls = album.querySelector(".album-buttons");
     controls.prepend(pause);
-    let stopped = reducedMotion.matches;
+    const manualByDefault = album.id === "web-album";
+    let stopped = manualByDefault || reducedMotion.matches;
     let timer, hovered = false, inView = false, playRequested = false;
     function schedule() {
       clearTimeout(timer);
@@ -324,7 +325,7 @@
     album.addEventListener("focusin",schedule);
     album.addEventListener("focusout",() => requestAnimationFrame(schedule));
     document.addEventListener("visibilitychange",schedule);
-    reducedMotion.addEventListener("change", () => { stopped = reducedMotion.matches; playbackLabel(); schedule(); });
+    reducedMotion.addEventListener("change", () => { stopped = manualByDefault || reducedMotion.matches; playbackLabel(); schedule(); });
     new IntersectionObserver(([entry]) => { inView = entry.isIntersecting; schedule(); },
       {threshold:0.25}).observe(album);
     new MutationObserver(schedule).observe(album.closest(".scene"),{attributes:true,attributeFilter:["class"]});
