@@ -72,7 +72,8 @@ dialog.lightbox img{width:min(96vw,167.11dvh);max-height:none;height:auto;aspect
 @media(prefers-reduced-motion:no-preference){
  .node{animation:note-arrival 400ms var(--arrival) both}
  #tracks>path{animation:thread-arrival 220ms ease-out var(--arrival) both}
- #room.returning .node{view-transition-name:var(--note-name);view-transition-class:history-sticker}
+ #room.returning .node{animation:note-departure 360ms ease-in both}
+ @keyframes note-departure{to{scale:.12;opacity:0}}
  @keyframes note-arrival{
   0%{scale:.16;opacity:0}
   58%{scale:1.065;opacity:1}

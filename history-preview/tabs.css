@@ -23,21 +23,7 @@
 }
 @media(max-width:660px){.flagship .tactics{margin-top:-14.46vw}}
 
-@view-transition{navigation:auto}
-@media(prefers-reduced-motion:no-preference){
- html:is(.history-enter,.history-return)::view-transition-group(*){animation-duration:480ms}
- html:is(.history-enter,.history-return)::view-transition-image-pair(root){isolation:isolate}
- html:is(.history-enter,.history-return)::view-transition-old(root),
- html:is(.history-enter,.history-return)::view-transition-new(root){mix-blend-mode:normal;animation:none}
- html.history-enter::view-transition-new(root){animation:board-slide-in 480ms cubic-bezier(.35,0,.2,1) both}
- html.history-return::view-transition-old(root){z-index:1;animation:board-slide-out 480ms cubic-bezier(.35,0,.2,1) both}
- /* Move each snapshot group in viewport coordinates, keeping its captured rotation inside. */
- html.history-return::view-transition-group(.history-sticker){animation:board-slide-out 480ms cubic-bezier(.35,0,.2,1) both}
- html.history-return::view-transition-old(.history-sticker){
-  transform-origin:48% 1%;animation:history-note-out 360ms cubic-bezier(.4,0,.65,1) both
- }
- @keyframes history-note-out{to{scale:.12;opacity:0}}
- @keyframes board-slide-out{from{translate:0}to{translate:100vw 0}}
- @keyframes board-slide-in{from{translate:100vw 0}to{translate:0}}
-}
-@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+
+dialog.history-cover{position:fixed;inset:0;margin:0;padding:0;border:0;width:100%;height:100%;max-width:none;max-height:none;overflow:hidden;background:#d9d3c3}
+.history-cover::backdrop{background:transparent}
+.history-cover iframe{display:block;width:100%;height:100%;border:0;background:#d9d3c3}

@@ -12,7 +12,6 @@ viewer.style.setProperty("--arrival",stages.length*arrivalStep+"ms");
 const nodes=stages.map((s,i)=>{
  const n=document.createElement("button");n.className="node";n.style.gridArea=cells[i].join(" / ");
  n.style.setProperty("--arrival",i*arrivalStep+"ms");
- n.style.setProperty("--note-name","history-note-"+i);
  n.innerHTML='<img alt=""><span class="num"></span><b></b><span class="date"></span><small></small>';
  if(s.thumbCaption){n.firstChild.alt=s.thumbCaption;n.firstChild.title=s.thumbCaption}
  n.firstChild.src=s.thumb;n.querySelector(".num").textContent=number(i);n.querySelector(".date").textContent=s.date;n.querySelector("b").textContent=s.title;n.querySelector("small").textContent=s.summary;
@@ -135,8 +134,8 @@ function closeRoom(){
  if(!opened)return;
  room.classList.add("returning");
  opened=false;cancelAnimationFrame(raf);sessionStorage.setItem("historyReturned",String(Date.now()));
- // Finish dispatching the wheel event before navigating to the separate Demo document.
- setTimeout(()=>location.replace("../index.html#flagship"),0)
+ if(parent!==window)parent.postMessage("history-board-return",location.origin);
+ else location.replace("../index.html#flagship");
 }
 $("back").onclick=closeRoom;
 document.addEventListener("keydown",e=>{if(e.key==="Escape"&&opened&&!dialog.open)closeRoom()});
