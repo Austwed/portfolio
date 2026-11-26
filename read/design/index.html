@@ -1,5 +1,6 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《断剑归途》游戏设计规格书</title><link rel="stylesheet" href="../reader.css"></head><body><main>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>《断剑归途》游戏设计规格书</title><link rel="stylesheet" href="../reader.css?v=spec-nav2"></head><body class="spec-reader"><nav class="spec-jump" aria-label="规格书章节导航"><label>章节导航 <select><option value="">选择章节</option><option value="1-产品定义">1. 产品定义</option><option value="2-故事人物与场景">2. 故事人物与场景</option><option value="3-核心循环与设计目标">3. 核心循环与设计目标</option><option value="4-系统功能规格">4. 系统功能规格</option><option value="5-数值与计算规格">5. 数值与计算规格</option><option value="6-主线流程与关卡规格">6. 主线流程与关卡规格</option><option value="7-界面与输入规格">7. 界面与输入规格</option><option value="8-文本与视听规格">8. 文本与视听规格</option><option value="9-状态数据与保存规格">9. 状态数据与保存规格</option><option value="10-制作分解与里程碑">10. 制作分解与里程碑</option><option value="11-验收与迭代">11. 验收与迭代</option><option value="12-后续调整">12. 后续调整</option></select></label><a href="#section">回到顶部</a></nav><main>
 <p><a href="../../assets/files/design-spec.pdf" target="_blank" rel="noopener">打开 PDF 版</a> · <a href="../../assets/files/design-spec.pdf" download="断剑归途-游戏设计规格书.pdf">下载 PDF</a></p><h1 id="section">《断剑归途》游戏设计规格书</h1>
+
 <p>Windows／Android · 横屏 · 2026 年 11 月 23 日修订</p>
 <h2 id="section-1">文档信息</h2>
 <table>
@@ -3142,4 +3143,10 @@
 <p>安卓对白现行框体、字号和行高仍有运行覆盖。后续并回可编辑布局时，沿用第7.5节中的现行尺寸，复测长句、答复滚动和横屏安全区。</p>
 <p>西山调查与更完整的跨据点内容另起设计范围。当前 Demo 在修复白桦村、与返村乡亲交谈后，去长椅坐稳完成主线。</p>
 
-</main></body></html>
+</main><script>
+const selector = document.querySelector('.spec-jump select');
+selector.addEventListener('change', () => {
+  if (selector.value) location.hash = selector.value;
+  selector.selectedIndex = 0;
+});
+</script></body></html>

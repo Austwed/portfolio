@@ -14,3 +14,12 @@ th{background:#eaf0fb;color:#1a3267}blockquote{border-left:3px solid #325abb;mar
 img{max-width:100%;height:auto}
 figure{margin:1.5rem 0;text-align:center}figure img{display:inline-block}figcaption{font-size:.88rem;color:#465773}
 @media print{main{padding:0;max-width:none}h2,h3{break-after:avoid}thead{display:table-header-group}table{display:table}tr{break-inside:avoid}}
+
+@media screen{
+  .spec-reader{padding-top:3.25rem}
+  .spec-jump{position:fixed;inset:0 0 auto;z-index:5;box-sizing:border-box;max-width:65rem;height:3.25rem;margin:auto;padding:0 clamp(.75rem,4vw,3rem);display:flex;align-items:center;justify-content:space-between;gap:.5rem;background:#eaf0fb;color:#1a3676;border-bottom:2px solid #8199c4;font-weight:600}
+  .spec-jump select{max-width:51vw;margin-left:.25rem;padding:.35rem;color:#172c52;font:inherit}
+  .spec-jump a{white-space:nowrap;font-size:.9rem}
+  .spec-reader :is(h1,h2,h3){scroll-margin-top:4rem}
+}
+@media print{.spec-jump{display:none}}

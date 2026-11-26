@@ -220,24 +220,41 @@
     if (index >= 0) changeChapter(index, null);
   });
 
-  // A wheel burst stays consumed until the device stops sending events.
-  // Momentum surviving a completed transition cannot start a second turn.
-  let lastWheel = -Infinity, distance = 0, consumed = false;
+  // Use fresh wheel input to advance; never queue turns for later playback.
+  let lastWheel = -Infinity, lastTurn = -Infinity, wheelDirection = 0;
+  let wheelDistance = 0, peakDelta = 0, turned = false;
   window.addEventListener("wheel", event => {
-    if (!cover || event.ctrlKey || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
+    if (!cover || event.ctrlKey || !event.deltaY || Math.abs(event.deltaX) > Math.abs(event.deltaY)) return;
     event.preventDefault();
     const now = performance.now();
-    if (now - lastWheel > 210) { distance = 0; consumed = false; }
-    lastWheel = now;
-    if (consumed || !event.deltaY) return;
+    const direction = Math.sign(event.deltaY);
     const unit = event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? innerHeight : 1;
-    const delta = event.deltaY * unit;
-    if (Math.sign(delta) !== Math.sign(distance)) distance = 0;
-    distance += delta;
-    if (transitions.length) { consumed = true; return; }
-    if (Math.abs(distance) < 38) return;
-    consumed = true;
-    changeChapter(active + Math.sign(distance));
+    const amount = Math.min(120, Math.abs(event.deltaY) * unit);
+    if (now - lastWheel > 210 || direction !== wheelDirection) {
+      wheelDistance = peakDelta = 0;
+      turned = false;
+    }
+    lastWheel = now;
+    wheelDirection = direction;
+    peakDelta = Math.max(peakDelta, amount);
+    // Ignore the diminishing tail of a touchpad flick after its first turn.
+    if (turned && amount < Math.max(3, peakDelta * .45)) return;
+    wheelDistance += amount;
+    const rate = turned ? Math.min(2.4, 1 + wheelDistance / 240) : 1;
+    if (transitions.length) {
+      if (now - lastTurn >= 85 && wheelDistance >= 38) {
+        transitions.forEach(animation => animation.updatePlaybackRate(Math.max(1.5, rate)));
+      }
+      return;
+    }
+    if (wheelDistance < (turned ? 90 : 38) || now - lastTurn < 260) return;
+    const next = active + direction;
+    if (next < 0 || next >= sections.length) return;
+    changeChapter(next);
+    if (turned) transitions.forEach(animation => animation.updatePlaybackRate(rate));
+    lastTurn = now;
+    turned = true;
+    wheelDistance = 0;
   }, {passive:false});
   document.addEventListener("keydown", event => {
     if (!cover || event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
