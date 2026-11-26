@@ -63,6 +63,7 @@ function renderFrame(type,dir=1){
 function paint(old=active){
  nodes[active].classList.toggle("swung");
  nodes.forEach((n,i)=>n.setAttribute("aria-current",String(i===active)));
+ $("prototype-links").hidden=active!==5;
  $("heading").textContent=stages[active].title;$("story").textContent=stages[active].story;$("source").textContent=stages[active].source;
  viewer.querySelector(".albumfoot > div").hidden=stages[active].imgs.length===1;
  status();renderFrame("stage",active>=old?1:-1);

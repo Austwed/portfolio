@@ -97,3 +97,7 @@ dialog.lightbox img{width:min(96vw,167.11dvh);max-height:none;height:auto;aspect
  .albumfoot{position:absolute;top:100%;left:0;right:0}
  .prose{align-self:center}
 }
+
+.review-link,#prototype-links a{color:#784328;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.review-link{margin-left:auto;white-space:nowrap}
+#prototype-links:not([hidden]){display:flex;flex-wrap:wrap;gap:5px 14px;margin-top:6px}
