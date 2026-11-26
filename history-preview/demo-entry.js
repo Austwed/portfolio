@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  }
  entry.onclick=open;
  let start;const scene=document.querySelector("#flagship");
- scene.addEventListener("touchstart",e=>{start=e.target.closest("a,button,.album")?null:e.touches[0]},{passive:true});
+ scene.addEventListener("touchstart",e=>{start=matchMedia("(max-width:660px)").matches||e.target.closest("a,button,.album")?null:e.touches[0]},{passive:true});
  scene.addEventListener("touchend",e=>{if(start&&start.clientX-e.changedTouches[0].clientX>85&&Math.abs(e.changedTouches[0].clientY-start.clientY)<40)open();start=null},{passive:true});
 });
 window.addEventListener("pageshow",()=>{quietUntil=Number(sessionStorage.getItem("historyReturned"))+500});

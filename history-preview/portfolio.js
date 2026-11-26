@@ -377,10 +377,28 @@
     settle();
   }
   Object.entries(photographs).forEach(([id, frames]) => bindAlbum(document.getElementById(id), frames));
+  const mobileChapter = matchMedia("(max-width:660px)");
+  let chapterTurn;
+  function swipeChapter(step) {
+    const index = active + step;
+    if (chapterTurn || index < 0 || index >= sections.length) return;
+    if (reducedMotion.matches || !document.startViewTransition) {
+      changeChapter(index);
+      return;
+    }
+    const root = document.documentElement;
+    root.dataset.swipe = step > 0 ? "next" : "previous";
+    chapterTurn = document.startViewTransition(() => changeChapter(index));
+    chapterTurn.finished.finally(() => {
+      delete root.dataset.swipe;
+      chapterTurn = null;
+    });
+  }
   let touch = null;
   document.addEventListener("touchstart", event => {
     touch = event.touches.length === 1 ? {
-      x:event.touches[0].clientX, y:event.touches[0].clientY, album:event.target.closest(".album-stage")?.closest(".album")
+      x:event.touches[0].clientX, y:event.touches[0].clientY, scene:event.target.closest("main > .scene"),
+      album:event.target.closest(".album-stage")?.closest(".album")
     } : null;
   }, {passive:true});
   document.addEventListener("touchcancel", () => { touch = null; }, {passive:true});
@@ -390,6 +408,8 @@
     const dy = event.changedTouches[0].clientY - touch.y;
     if (touch.album && Math.abs(dx) > 30 && Math.abs(dx) > Math.abs(dy)*1.3) {
       turns.get(touch.album)(dx < 0 ? 1 : -1);
+    } else if (mobileChapter.matches && touch.scene && Math.abs(dx) >= 54 && Math.abs(dx) > Math.abs(dy)*1.5) {
+      swipeChapter(dx < 0 ? 1 : -1);
     } else if (cover && !transitions.length && Math.abs(dy) > 45 && Math.abs(dy) > Math.abs(dx)*1.3) {
       changeChapter(active + (dy < 0 ? 1 : -1));
     }
@@ -407,6 +427,21 @@
     group.addEventListener("focusin", () => feature(id));
     group.addEventListener("focusout", event => { if (!group.contains(event.relatedTarget)) feature(null); });
   });
+  const arSwitch = document.querySelector(".ar-switch");
+  const arButtons = Array.from(arSwitch.querySelectorAll("button"));
+  arButtons.forEach((button,index)=>button.addEventListener("click",()=>{
+    arSwitch.parentElement.classList.toggle("show-catalog",index===1);
+    arButtons.forEach(item=>item.setAttribute("aria-pressed",String(item===button)));
+  }));
+  const switcher = document.querySelector(".mobile-game-switch button");
+  switcher.addEventListener("click", () => {
+    const spread = switcher.closest(".game-spread");
+    const showWeb = spread.classList.toggle("show-web");
+    switcher.setAttribute("aria-expanded", String(showWeb));
+    switcher.querySelector("span").firstChild.textContent = showWeb ? "断剑归途 · Unity DEMO" : "网页流程原型";
+    switcher.querySelector("small").textContent = showWeb ? "返回实机相册" : "查看原型相册";
+    switcher.querySelector("img").src = photographs[showWeb ? "unity-album" : "web-album"][0][0];
+  });
   document.querySelectorAll(".binding").forEach(binding => {
     const lid = binding.querySelector(".lid");
     const contents = binding.querySelector(".contents");
@@ -420,14 +455,19 @@
       lid.focus({preventScroll:true});
     }
     lid.addEventListener("click", () => {
+      if (mobileChapter.matches) {
+        document.querySelectorAll(".binding.opened").forEach(other => {
+          if (other !== binding) other.querySelector(".shut").click();
+        });
+      }
       open(true);
       contents.querySelector("li a").focus({preventScroll:true});
     });
-    binding.addEventListener("pointerenter", event => { if (event.pointerType === "mouse") open(true); });
+    binding.addEventListener("pointerenter", event => { if (!mobileChapter.matches && event.pointerType === "mouse") open(true); });
     binding.addEventListener("pointerleave", event => {
-      if (event.pointerType === "mouse" && !binding.contains(document.activeElement)) open(false);
+      if (!mobileChapter.matches && event.pointerType === "mouse" && !binding.contains(document.activeElement)) open(false);
     });
-    binding.addEventListener("focusout", event => { if (!binding.contains(event.relatedTarget)) open(false); });
+    binding.addEventListener("focusout", event => { if (!mobileChapter.matches && !binding.contains(event.relatedTarget)) open(false); });
     binding.addEventListener("keydown", event => {
       if (event.key === "Escape") { event.preventDefault(); closeAndFocus(); }
     });
